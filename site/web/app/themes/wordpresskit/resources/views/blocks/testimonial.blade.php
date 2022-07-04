@@ -8,7 +8,7 @@
 * @param   (int|string) $post_id The post ID this block is saved to.
 */
 ?>
-<section>
+<section class="testimonial-block">
   <h1>{{ get_field("name") }}</h1>
   <h2>{{ get_field("description") }}</h2>
 </section>

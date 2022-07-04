@@ -84,8 +84,8 @@ if (WP_ENV === 'production') {
 }
 
 // Block registers
-add_action('acf/init', 'AcfRegisterBlocks');
-function AcfRegisterBlocks() {
+add_action('acf/init', 'ACFRegisterBlocks');
+function ACFRegisterBlocks() {
     // Check function exists.
     if( function_exists('acf_register_block_type') ) {
         // register a testimonial block.
@@ -103,6 +103,9 @@ function AcfRegisterBlocks() {
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'testimonial', 'quote' ),
+            'supports'	=> array(
+                'align'		=> false,
+            )
         ));
     }
 }
